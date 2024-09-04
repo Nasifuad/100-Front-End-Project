@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+VN:wght@100..400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.27), rgba(0, 0, 0, 0.219));
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+}
+video {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  bottom: 0;
+}
+
+h1 {
+  font-family: "Playwrite VN", sans-serif;
+  font-weight: bolder;
+  font-size: 7rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  transition: 0.5s;
+}
+h1:hover {
+  -webkit-text-stroke: 2px white;
+
+  color: transparent;
+}
+a {
+  text-decoration: none;
+  color: white;
+  border: 2px solid #fff;
+  padding: 0.5rem 2rem;
+  /* font-family: "Playwrite VN"; */
+  font-size: 2rem;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+a:hover {
+  color: black;
+  background-color: white;
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .video {
+    width: auto;
+    height: 100%;
+  }
+}
+@media (min-aspect-ratio: 16/9) {
+  .video {
+    width: 100%;
+    height: auto;
+  }
+}
