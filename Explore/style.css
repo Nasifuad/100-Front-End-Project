@@ -22,7 +22,9 @@ video {
   right: 0;
   bottom: 0;
 }
-
+.title {
+  text-align: center;
+}
 h1 {
   font-family: "Playwrite VN", sans-serif;
   font-weight: bolder;
