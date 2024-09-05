@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-image: linear-gradient(rgba(52, 17, 191, 0.5), rgba(0, 0, 0, 0.5));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.load {
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  animation: load 0.8s ease infinite;
+}
+.loading1 {
+  animation-delay: 0.3s;
+}
+
+.loading2 {
+  animation-delay: 0.4s;
+}
+.loading3 {
+  animation-delay: 0.5s;
+}
+.loading4 {
+  animation-delay: 0.6s;
+}
+
+@keyframes load {
+  0% {
+    width: 30px;
+    height: 30px;
+  }
+  50% {
+    width: 20px;
+    height: 20px;
+  }
+}
