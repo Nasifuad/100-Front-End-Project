@@ -37,32 +37,62 @@ header {
   transition: 0.8s ease;
 }
 .tit:hover {
-  -webkit-text-stroke: 1px rgb(255, 255, 255);
-  color: transparent;
+  /* -webkit-text-stroke: 1px rgb(255, 255, 255); */
+  /* color: transparent; */
   font-weight: 900px;
   transform: scale(1.1);
+}
+.tit::before {
+  margin-left: auto;
+}
+.tit::before,
+.tit::after {
+  content: "";
+  width: 0%;
+  background: #f44336;
+  height: 2px;
+  display: block;
+  transition: 0.8s ease;
+}
+.tit:hover::before,
+.tit:hover::after {
+  width: 100%;
 }
 .nav-search {
   width: 30%;
   position: relative;
 }
 .search {
+  font-family: Georgia, "Times New Roman", Times, serif;
   width: 100%;
-
   color: rgb(255, 255, 255);
   border: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
   text-align: center;
-  font-size: 15px;
+  font-size: 20px;
   padding: 10px;
   outline: none;
-  border-radius: 15px;
-  border-bottom: 1px solid #ffffff;
+  /* border-radius: 15px; */
+  /* border-bottom: 1px solid #ffffff; */
   background: none;
+  transition: 0.5s ease;
+}
+.search:hover {
+  border: none;
+  border-bottom: 1px solid #ffff;
+  border-radius: 0px;
+}
+.search:hover::placeholder {
+  color: rgb(0, 0, 0);
+  color: transparent;
+
+  transition: 1s ease;
 }
 .search::placeholder {
   color: #ffffff;
   font-size: 20px;
 }
+
 .search-icon {
   color: #ffffff;
   position: absolute;
@@ -70,6 +100,12 @@ header {
   right: 0;
   padding: 10px;
   top: 0;
+}
+.search-icon:hover {
+  cursor: pointer;
+  text-shadow: 5px 0px 10px rgb(58, 54, 54);
+  transform: scale(1.2);
+  transition: 1s ease;
 }
 .nav-item {
   /* width: 30%; */
@@ -83,10 +119,24 @@ header {
   padding: 10px;
   font-size: 20px;
   /* border-radius: 10px; */
-  border-bottom: 1px solid #fff;
+  /* border-bottom: 1px solid #fff; */
 }
-.item:hover {
-  cursor: pointer;
+.item::before {
+  margin-left: auto;
+}
+.item::before,
+.item::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  transition: 0.8s ease;
+  display: block;
+}
+.item:hover::before,
+.item:hover::after {
+  width: 100%;
 }
 .container {
   position: relative;
